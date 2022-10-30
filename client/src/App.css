@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Lobster&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+  *::-webkit-scrollbar {
+      display: none;
+  }
+
+
+  @keyframes fadeInAnimation {
+      0% {
+          opacity: 0;
+      }
+      inherit {
+          opacity: 1;
+      }
+  }
+
+  @keyframes glow {
+    from {
+    text-shadow: 0 0 0.2vh #fff, 0 0 0.4vh #fff, 0 0 0.6vh rgb(228, 204, 255), 0 0 0.8vh rgb(228, 204, 255), 0 0 0 1vh rgb(228, 204, 255);
+    }
+    
+    to {
+    text-shadow: 0 0 0.4vh #fff, 0 0 0.6vh rgba(240, 248, 255, 0.4), 0 0 0.8vh rgba(240, 248, 255, 0.4), 0 0 1vh rgba(240, 248, 255, 0.4), 0 0 1.2vh rgba(240, 248, 255, 0.4);
+    }
+  }
+
+  html{
+    /* background */
+    background-image: 
+    linear-gradient(
+    to bottom right, 
+    rgba(0, 255, 255, 0.8), 
+    rgba(184, 212, 142, 0.5), 
+    rgba(128, 255, 212, 0.8));
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+}
+  
+  body{
+    background-color: rgb(255, 192, 203, 0);
+    width: 100vw;
+    height: 99vh;
+  }
+
+header{
+  background-color: rgba(240, 248, 255, 0.4);
+  color: rgba(0, 194, 175, 0.8);
+  font-size: 6vh;
+  font-family: lobster;
+  border-radius: 8vh;
+  margin: .5vh auto;
+  animation: fadeInAnimation ease 2s, glow 1s ease-in-out infinite alternate;
+  }
+
+  h1, h2, h3, h4, h5{
+    font-family: lobster;
+    color: rgba(0,194,175,0.9);
+  }
+  h2{
+    background-color: rgba(0,194,175,0.9);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 2vh;
+  }
+
+nav{
+  background-color: rgba(240, 248, 255, 0.4);
+  color: rgba(0, 194, 175, 0.8);
+  margin: 1vh auto;
+  border-radius: 8vh;
+  font-size: 2vh;
+  padding: 1vh;
+  animation: fadeInAnimation ease 2s, glow 2s ease-in-out infinite alternate;
+} 
+
+main{
+  /* background */
+  background-color: rgb(128, 0, 128, 0);
+  /* sizing */
+  height: 81vh;
+  max-height: 81vh;
+  width: 99vw;
+  overflow-y: scroll;
+  /* margin padding */
+  margin: 0 auto;
+  /* flex */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  /* scroll */
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* extra */
+  animation: fadeInAnimation ease 7s;
+}
+
+main > div {
+  background-color: rgb(240, 248, 255, 0.4);
+  color: rgba(0, 0, 0, 0.6);
+  /* sizing */
+  height: 79vh;
+  max-height: 79vh;
+  width: max-content;
+  max-width: max-content;
+  height: max-content;
+  /* border and padding */
+  border-radius: 3vh;
+  padding: 1vh;
+  margin: 1vh;
+  /* scroll */
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+
+a {
+  color: rgba(0, 194, 175, 0.8);
+  font-family: lobster;
+  text-decoration: none;
+  margin: 0.5vh;
+}
+
+form{
+  width: 30vw;
+}
+input, select, textarea, select:focus{
+  /* background and border */
+  background-color: rgba(240, 248, 255, 0.6);
+  border: none;
+  border-radius: 2vh;
+  outline: none;
+  /* size */
+  width: 100%;
+  padding: 1vh 2vh;
+  margin: 1vh 0;
+  resize: none;
+  /* font */
+  font-family: "Barlow Condensed";
+  font-size: 2vh;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+img {
+  display: block;
+  filter: opacity(0.5);
+  animation: fadeInAnimation ease 7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  border-radius: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+button {
+  display: block;
+  margin: 1vh auto;
+  transition-duration: 0.4s;
+  /* background */
+  background-color: rgba(240, 248, 255, 0.1);
+  /* border padding */
+  border: 0.15vh rgba(0, 194, 175, 0.8) solid;
+  border-radius: 1vh;
+  padding: 0.5vh 2.5vh 0.5vh 2.5vh;
+  /* font */
+  font-size: 2vh;
+  font-family: lobster;
+  color: rgba(0, 194, 175, 0.6);
+  text-decoration: none;
+}
+  button:hover {
+      transform: translateY(-0.25vh);
+  }
